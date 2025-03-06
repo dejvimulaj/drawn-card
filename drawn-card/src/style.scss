@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('../public/Yu-Gi-Oh!\ Matrix\ Regular\ Small\ Caps\ 1.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  /* Then apply the font to your elements */
+  body {
+    font-family: 'MyCustomFont', sans-serif;
+  }
+
+html, body{
+    height: 100%;
+    background-color: rgb(255, 243, 208);
+    display: flex;
+    justify-content: center;
+}
+
+.card-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    height: 550px;
+    width: 380px;
+    // background-color: rgb(184, 126, 10);
+    background-color: rgb(96, 96, 96);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 1px rgba(black, 0.6);
+    z-index: 0;
+}
+
+.card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 95%;
+    width: 93%;
+    background-color: rgba(189, 138, 37, 0.833);
+  background: 
+  radial-gradient(circle at 40px 40px, rgba(245,245,245,0.2) 0, transparent 35px) no-repeat,
+  radial-gradient(circle at 80px 80px, rgba(245,245,245,0.2) 0, transparent 35px) no-repeat,
+  radial-gradient(circle at 120px 80px, rgba(245,245,245,0.2) 0, transparent 35px) no-repeat,
+  radial-gradient(circle at 160px 300px, rgba(245,245,245,0.2) 0, transparent 35px) no-repeat,
+  radial-gradient(circle at 200px 120px, rgba(245,245,245,0.2) 0, transparent 35px) no-repeat,
+  radial-gradient(circle at 240px 240px, rgba(245,245,245,0.07) 0, transparent 35px) no-repeat,
+  radial-gradient(circle at 280px 80px, rgba(245,245,245,0.07) 0, transparent 35px) no-repeat,
+  radial-gradient(circle at 320px 340px, rgba(245,245,245,0.07) 0, transparent 35px) no-repeat,
+  radial-gradient(circle at 120px 400px, rgba(245,245,245,0.07) 0, transparent 35px) no-repeat,
+  radial-gradient(circle at 200px 230px, rgba(245,245,245,0.2) 0, transparent 35px) no-repeat,
+  radial-gradient(circle at 240px 400px, rgba(245,245,245,0.07) 0, transparent 35px) no-repeat,
+  radial-gradient(circle at 200px 40px, rgba(245,245,245,0.2) 0, transparent 35px) no-repeat,
+  radial-gradient(circle at 270px 210px, rgba(245,245,245,0.07) 0, transparent 23px) no-repeat,
+  radial-gradient(circle at 320px 340px, rgba(245,245,245,0.07) 0, transparent 35px) no-repeat,
+  radial-gradient(circle at 120px 400px, rgba(245,245,245,0.1) 0, transparent 35px) no-repeat,
+  radial-gradient(circle at 200px 230px, rgba(245,245,245,0.07) 0, transparent 35px) no-repeat,
+  radial-gradient(circle at 240px 400px, rgba(245,245,245,0.07) 0, transparent 35px) no-repeat,
+  radial-gradient(ellipse at 50px 150px, rgba(245,245,245,0.07) 0, transparent 25px) no-repeat,
+  radial-gradient(ellipse at 90px 220px, rgba(245,245,245,0.2) 0, transparent 40px) no-repeat,
+  radial-gradient(ellipse at 150px 50px, rgba(245,245,245,0.07) 0, transparent 30px) no-repeat,
+  radial-gradient(ellipse at 210px 300px, rgba(245,245,245,0.07) 0, transparent 50px) no-repeat,
+  radial-gradient(ellipse at 270px 120px, rgba(245,245,245,0.2) 0, transparent 35px) no-repeat,
+  radial-gradient(ellipse at 330px 200px, rgba(245,245,245,0.07) 0, transparent 40px) no-repeat,
+  radial-gradient(ellipse at 370px 340px, rgba(245,245,245,0.5) 0, transparent 45px) no-repeat,
+  radial-gradient(ellipse at 410px 80px, rgba(245,245,245,0.07) 0, transparent 30px) no-repeat,
+  radial-gradient(ellipse at 450px 160px, rgba(245,245,245,0.07) 0, transparent 35px) no-repeat,
+  radial-gradient(ellipse at 490px 240px, rgba(245,245,245,0.07) 0, transparent 40px) no-repeat,
+  radial-gradient(ellipse at 530px 300px, rgba(245,245,245,0.07) 0, transparent 50px) no-repeat,
+  radial-gradient(ellipse at 570px 360px, rgba(245,245,245,0.7) 0, transparent 45px) no-repeat,
+  radial-gradient(ellipse at 610px 80px, rgba(245,245,245,0.07) 0, transparent 30px) no-repeat,
+  radial-gradient(ellipse at 650px 140px, rgba(245,245,245,0.07) 0, transparent 35px) no-repeat,
+  radial-gradient(ellipse at 690px 220px, rgba(245,245,245,0.07) 0, transparent 40px) no-repeat,
+  radial-gradient(ellipse at 730px 300px, #f5f5f512 0, transparent 50px) no-repeat,
+  radial-gradient(ellipse at 770px 380px, rgba(245,245,245, 0.3) 0, transparent 45px) no-repeat,
+  radial-gradient(ellipse at 310px 60px, rgba(245,245,245,0.07) 0, transparent 30px) no-repeat,
+  radial-gradient(ellipse at 850px 140px, rgba(245,245,245,0.07) 0, transparent 35px) no-repeat,
+  radial-gradient(ellipse at 10px 220px, rgba(245,245,245,0.3) 0, transparent 40px) no-repeat,
+  radial-gradient(ellipse at 10px 300px, rgba(245,245,245,0.3) 0, transparent 50px) no-repeat,
+  radial-gradient(ellipse at 10px 380px, rgba(245,245,245,0.3) 0, transparent 45px) no-repeat,
+    radial-gradient(ellipse at 10px 340px, rgba(245,245,245,0.3) 0, transparent 30px) no-repeat,
+  radial-gradient(ellipse at 12px 80px, rgba(245,245,245,0.1) 0, transparent 30px) no-repeat,
+  radial-gradient(ellipse at 50px 160px, rgba(245,245,245,0.07) 0, transparent 35px) no-repeat,
+  radial-gradient(ellipse at 20px 240px, rgba(245,245,245,0.07) 0, transparent 40px) no-repeat,
+  radial-gradient(ellipse at 30px 320px, rgba(245,245,245,0.07) 0, transparent 50px) no-repeat,
+  radial-gradient(ellipse at 70px 400px, rgba(245,245,245,0.07) 0, transparent 45px) no-repeat,
+  radial-gradient(ellipse at 30px 480px, rgba(245,245,245,0.07) 0, transparent 30px) no-repeat,
+  radial-gradient(ellipse at 45px 100px, rgba(245,245,245,0.07) 0, transparent 35px) no-repeat,
+  radial-gradient(ellipse at 90px 80px, rgba(245,245,245,0.08) 0, transparent 40px) no-repeat,
+  radial-gradient(ellipse at 10px 560px, rgba(245,245,245,0.07) 0, transparent 50px) no-repeat,
+  radial-gradient(ellipse at 120px 540px, rgba(245,245,245,0.07) 0, transparent 45px) no-repeat,
+  radial-gradient(ellipse at 310px 540px, rgba(245,245,245,0.07) 0, transparent 40px) no-repeat,
+  radial-gradient(ellipse at 90px 80px, rgba(245,245,245,0.07) 0, transparent 40px) no-repeat,
+  radial-gradient(ellipse at 10px 560px, rgba(245,245,245,0.07) 0, transparent 50px) no-repeat,
+  radial-gradient(ellipse at 120px 540px, rgba(245,245,245,0.2) 0, transparent 45px) no-repeat,
+  radial-gradient(ellipse at 310px 540px, rgba(245,245,245,0.3) 0, transparent 40px) no-repeat,
+  radial-gradient(ellipse at 210px 540px, rgba(245,245,245,0.3) 0, transparent 40px) no-repeat,
+  radial-gradient(ellipse at 220px 540px, rgba(245,245,245,0.1) 0, transparent 40px) no-repeat,
+  radial-gradient(ellipse at 10px 540px, rgba(245,245,245,0.1) 0, transparent 40px) no-repeat,
+
+
+
+  rgba(189,138,37,0.833);
+  
+  
+    box-shadow: 0 0 10px 9px rgba(black, 0.5);
+    z-index: 1;
+}
+
+.card-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 17px;
+    height: 9%;
+    width: 90%;
+    background-color: rgba(189, 138, 37, 0);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 2;
+    filter:blur(1.5px);
+    box-shadow: -2px -3px 6px #e3e1e1, 2px 4px 6px rgb(78, 75, 75);
+}
+
+.stars-container{
+    display: flex;
+    margin-top: 6px;
+    justify-content: end;
+    background-color: transparent;
+    width: 87%;
+    height: 27px;
+}
+
+.star {
+    background: radial-gradient(
+      circle, 
+      rgba(245,251,63,1) 0%, 
+      rgba(239,201,49,1) 24%, 
+      rgba(230,126,28,1) 43%, 
+      rgba(211,69,32,1) 58%, 
+      rgba(159,3,35,1) 70%
+    );
+    height: 25px;
+    width: 25px;
+    margin-left: 2px;
+    border-radius: 50%;
+    filter: saturate(130%);
+    /* Outer shadow */
+    box-shadow: 
+      1px 1px 2px 1px rgba(75,71,71,0.5),
+      /* Inner highlight at top left */
+      inset 1px 3px rgba(255,255,255,0.1),
+      /* Inner shadow at bottom left */
+      inset -2px -4px 12px rgba(0,0,0,0.5);
+  }
+//   -2px 2px 4px
+.header-content{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    z-index: 3;
+    margin-top: 18px;
+    height: 9%;
+    width: 70%;
+    font-size: 38px;
+    text-align: left;
+
+}
+
+.card-imgbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3px;
+    height: 50%;
+    width: 83%;
+    background-color: rgb(0, 0, 0);
+    z-index: 3;
+    border-top: 7px solid rgb(136, 135, 135);
+    border-left: 7px solid rgb(126, 125, 125);
+    border-right: 7px solid rgb(91, 91, 91);
+    border-bottom: 7px solid rgb(84, 84, 84);
+}
+
+.card-description {
+    background-color: rgba(255, 255, 255, 0.489);
+    margin-top: 13px;
+    width: 92%;
+    height: 23%;
+    border: 5px solid; /* Set a border width and style */
+    border-image: linear-gradient(90deg, 
+        rgba(159,110,3,1) 0%, 
+        rgb(187, 147, 54) 2%, 
+        rgba(181,128,10,1) 5%, 
+        rgb(130, 99, 34) 7%, 
+        rgb(164, 99, 49) 10%, 
+        rgba(175,113,65,1) 12%, 
+        rgb(145, 69, 11) 16%, 
+        rgba(167,109,64,1) 19%, 
+        rgb(163, 95, 43) 22%, 
+        rgba(115,78,50,1) 26%, 
+        rgb(163, 94, 40) 29%, 
+        rgba(149,105,72,1) 32%, 
+        rgb(209, 120, 53) 35%, 
+        rgba(180,112,62,1) 38%, 
+        rgb(157, 80, 24) 41%, 
+        rgba(170,104,56,1) 44%, 
+        rgb(158, 73, 12) 47%, 
+        rgba(180,110,58,1) 49%, 
+        rgb(145, 77, 28) 52%, 
+        rgba(145,92,53,1) 54%, 
+        rgb(137, 78, 35) 56%, 
+        rgba(189,117,64,1) 59%, 
+        rgb(136, 67, 18) 61%, 
+        rgba(168,104,57,1) 63%, 
+        rgb(160, 92, 40) 65%, 
+        rgba(131,78,39,1) 67%, 
+        rgb(139, 73, 26) 69%, 
+        rgba(201,116,54,1) 71%, 
+        rgb(161, 90, 38) 73%, 
+        rgba(204,116,51,1) 74%, 
+        rgb(181, 101, 40) 76%, 
+        rgba(122,70,32,1) 78%, 
+        rgb(160, 92, 43) 79%, 
+        rgb(147, 87, 44) 80%, 
+        rgba(129,71,30,1) 82%, 
+        rgb(155, 85, 36) 83%, 
+        rgba(159,87,36,1) 85%, 
+        rgb(180, 100, 44) 86%, 
+        rgba(175,93,34,1) 88%, 
+        rgb(145, 77, 29) 90%, 
+        rgba(166,77,14,1) 91%, 
+        rgb(182, 98, 38) 93%, 
+        rgb(190, 109, 52) 95%, 
+        rgba(143,82,39,1) 97%)
+      1; /* Use the entire gradient as the border */
+  }
